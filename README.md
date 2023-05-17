@@ -1,21 +1,29 @@
 # Curio
 
-## Develop
-
-Run the following command:
-
-```sh
-yarn dev
-```
-
-### Apps and Packages
+## Apps
 
 - `api`: an [Express](https://expressjs.com/) server
 - `web`: a [Next.js](https://nextjs.org/) app
 - `admin`: a [Vite](https://vitejs.dev/) single page app
+
+## Packages
+
+- `database`: prisma client and database migrations
 - `logger`: isomorphic logger (a small wrapper around console.log)
-- `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
+- `ui`: a React UI library
 - `scripts`: Jest and ESLint configurations
 - `tsconfig`: tsconfig.json;s used throughout the monorepo
 
-100% [TypeScript](https://www.typescriptlang.org/).
+## Database
+
+### Run postgres locally with docker
+
+```sh
+docker compose up
+```
+
+### Create a database migration
+
+```sh
+turbo db:migrate -- --name added_users_table
+```
