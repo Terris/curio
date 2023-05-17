@@ -6,7 +6,10 @@
     "dev": "turbo dev --no-cache  --continue --ignore='apps/admin/*'",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
-    "test": "turbo test"
+    "test": "turbo test",
+    "storybook:dev": "turbo run storybook:dev --parallel",
+    "storybook:build": "turbo run storybook:build --parallel",
+    "storybook:move": "turbo run storybook:move --filter=docs && turbo run storybook:move --filter=!docs"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
@@ -15,6 +18,7 @@
   "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "libs/*",
+    "config/*"
   ]
 }

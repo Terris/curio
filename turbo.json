@@ -37,6 +37,15 @@
     },
     "db:migrate": {
       "cache": false
+    },
+    "storybook:dev": {
+      "cache": false
+    },
+    "storybook:build": {
+      "outputs": ["storybook-static/**"]
+    },
+    "storybook:move": {
+      "cache": false
     }
   }
 }
