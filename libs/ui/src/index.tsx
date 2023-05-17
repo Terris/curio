@@ -1,3 +1,4 @@
-import * as React from "react";
-export { NewTabLink } from "./NewTabLink";
-export { CounterButton } from "./CounterButton";
+export * as stitches from "./stitches.config";
+export * as Button from "./Button";
+export * as CounterButton from "./CounterButton";
+export * as NewTabLink from "./NewTabLink";
