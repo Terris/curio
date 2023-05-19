@@ -1,3 +1,5 @@
 import * as React from "react";
-export * as Stitches from "./stitches.config";
+
 export * from "./Button";
+export * from "./Text";
+export * as Stitches from "./stitches.config";
