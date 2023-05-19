@@ -1,24 +1,19 @@
-import { log } from "logger";
-import { CounterButton, NewTabLink } from "ui";
+import { Button, Stitches } from "ui";
 
 export const metadata = {
-  title: "Store | Kitchen Sink",
+  title: "Curio | Web",
 };
 
-export default function Store() {
-  log("Hey! This is Home.");
+export default function HomePage() {
   return (
     <div className="container">
-      <h1 className="title">
-        Store <br />
-        <span>Kitchen Sink</span>
-      </h1>
-      <CounterButton />
-      <p className="description">
-        Built With{" "}
-        <NewTabLink href="https://turbo.build/repo">Turborepo</NewTabLink> +{" "}
-        <NewTabLink href="https://nextjs.org/">Next.js</NewTabLink>
-      </p>
+      <Logo>Curio</Logo>
+      <Button label="Test Button" />
+      <p className="description">Built With </p>
     </div>
   );
 }
+
+const Logo = Stitches.styled("h1", {
+  fontSize: "2rem",
+});

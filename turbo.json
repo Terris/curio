@@ -10,7 +10,8 @@
         "!.next/cache/**",
         "build/**",
         "api/**",
-        "public/build/**"
+        "public/build/**",
+        "storybook-static/**"
       ],
       "dependsOn": ["^build", "^db:generate"]
     },

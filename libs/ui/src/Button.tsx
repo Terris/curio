@@ -1,3 +1,5 @@
+import { styled } from "./stitches.config";
+
 export interface ButtonProps {
   primary?: boolean;
   backgroundColor?: string;
@@ -6,9 +8,6 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
   primary = false,
   size = "medium",
@@ -16,19 +15,15 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  const mode = primary ? "button--primary" : "button--secondary";
   return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <button type="button" style={{ backgroundColor }} {...props}>
       {label}
     </button>
   );
 };
+
+const StyledButton = styled("button", {
+  backgroundColor: "green",
+  color: "white",
+});

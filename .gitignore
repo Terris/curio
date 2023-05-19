@@ -40,3 +40,6 @@ build
 
 #cache
 .cache
+
+# storybook
+storybook-static

@@ -1,4 +1,3 @@
-export * as stitches from "./stitches.config";
-export * as Button from "./Button";
-export * as CounterButton from "./CounterButton";
-export * as NewTabLink from "./NewTabLink";
+import * as React from "react";
+export * as Stitches from "./stitches.config";
+export * from "./Button";
