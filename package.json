@@ -3,7 +3,7 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
-    "dev": "turbo dev --no-cache  --continue --ignore='apps/admin/*'",
+    "dev": "dotenv -- turbo dev --no-cache  --continue --ignore='apps/admin/*'",
     "dev:storybook": "turbo run dev --filter=storybook",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
@@ -13,6 +13,7 @@
     "storybook:move": "turbo run storybook:move --filter=storybook && turbo run storybook:move --filter=!docs"
   },
   "devDependencies": {
+    "dotenv-cli": "^7.2.1",
     "prettier": "^2.7.1",
     "turbo": "^1.9.3"
   },
